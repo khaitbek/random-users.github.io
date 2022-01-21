@@ -1,0 +1,107 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+}
+
+.black{
+    width: 100vw;
+    height: 50vh;
+    background: #000;
+}
+
+section.users{
+    width: 40%;
+    height: 500px;
+    background: #fff;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 25%;
+    right: 30%;
+    border-radius: 15px;
+    text-align: center;
+}
+.user h1{
+    font-size: 18px;
+    word-break: break-all;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+.img{
+    width:  200px;
+    height: 200px;
+    background-position: center;
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.img:hover{
+    transform: scale(1.2);
+}
+
+.btn-container{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.8rem;
+    margin: auto;
+}
+.btn-container button{
+    font-size: 35px;
+    background: none;
+    outline: none;
+    border: none;
+    transition: all 0.3s ease-in-out;
+    color: gray;
+    cursor: pointer;
+}
+.btn-container button.active{
+    color: rgb(73, 167, 167);
+}
+.btn-container button:hover{
+    color: rgb(73, 167, 167);
+}
+
+.randomBtn{
+    margin-top: 35px;
+    padding: 10px 15px;
+    font-size: 20px;
+    background: rgb(73, 167, 167);
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.randomBtn:hover{
+    background: rgb(18, 92, 92);
+}
+
+@media screen and (max-width:968px){
+    .img{
+        width: 100px;
+        height: 100px;
+    }
+    .randomBtn{
+        font-size: 14px;
+    }
+    .btn-container button{
+        font-size: 18px;
+    }
+    .users{
+        height: 350px !important;
+    }
+}
